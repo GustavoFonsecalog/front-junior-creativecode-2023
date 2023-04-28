@@ -32,7 +32,7 @@ export const Login = () => {
             justifyContent: 'center',
             alignItems: 'center',
         }}>
-            <Grid item md={6} lg={6} xs={12}>
+            <Grid item md={6} lg={3} xs={12}>
                 <Box sx={{
                     background: '#620cca',
                     padding: '100px',
