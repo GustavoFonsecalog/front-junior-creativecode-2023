@@ -1,12 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AppRoutes from './Routes/routes';
+
+import NavBar from './components/organisms/navbar'
 
 function App() {
   return (
     <div className="App">
       <header>
-        <h1>Header do Site</h1>
+        <NavBar />
+        <AppRoutes />
       </header>
     </div>
   );
