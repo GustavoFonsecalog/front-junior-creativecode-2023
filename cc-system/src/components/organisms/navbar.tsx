@@ -1,11 +1,12 @@
-import * as React from 'react';
+import { useContext } from 'react';
 import { AppBar, Button, Box, Toolbar, Typography, IconButton, Grid } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import Logo from '../../assets/images/logo.png'
 import styled from '@emotion/styled';
+import { AuthContext } from '../../Auth/authContext';
 
 const LogoImg = styled("img")({
     maxWidth: '120px',
@@ -13,6 +14,15 @@ const LogoImg = styled("img")({
 })
 
 export default function ButtonAppBar() {
+
+    const auth = useContext(AuthContext)
+    const navigate = useNavigate()
+
+    const handleLogout = async () => {
+        await auth.signout();
+        navigate('/')
+    }
+
     return (
         <Grid container>
             <Grid item lg={12} md={12} xs={12}>
@@ -26,19 +36,23 @@ export default function ButtonAppBar() {
                                 aria-label="menu"
                                 sx={{ mr: 2 }}
                             >
-                                <MenuIcon sx={{ color: '#000' }} />
+                                <MenuIcon sx={{ color: '#f8de64' }} />
                             </IconButton>
                             <Typography variant="h6" component="div" sx={{ flexGrow: 1, marginLeft: '100px' }}>
                                 <Link to={'/'}>
-                                    <LogoImg src={Logo} />
+                                    <LogoImg src={Logo} className='hidden-mobile' />
                                 </Link>
                             </Typography>
                             <Link to={'/private'}>
-                                <Button sx={{ color: '#000', fontWeight: 'bold' }}> Contatos </Button>
+                                <Button sx={{ color: '#f8de64', fontWeight: 'bold' }}> Contatos </Button>
                             </Link>
-                            <Link to={'/login'}>
-                                <Button sx={{ color: '#000', fontWeight: 'bold' }}>Login</Button>
-                            </Link>
+                            {auth.user ? (
+                                <Button sx={{ color: '#f8de64', fontWeight: 'bold' }} onClick={handleLogout}> Sair </Button>
+                            ) : (
+                                <Link to={'/login'}>
+                                    <Button sx={{ color: '#f8de64', fontWeight: 'bold' }}> Login </Button>
+                                </Link>
+                            )}
                         </Toolbar>
                     </AppBar>
                 </Box>
