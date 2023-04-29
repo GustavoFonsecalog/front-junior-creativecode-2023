@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ContactForm from "../../components/organisms/ContactForm";
+import ContactForm from "../../components/ContactForm";
 import { Contact } from "../../types/contact";
 import { Grid, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Container } from "@mui/material";
 

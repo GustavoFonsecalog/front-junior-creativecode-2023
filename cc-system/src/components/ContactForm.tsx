@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Contact } from "../../types/contact";
+import { Contact } from "../types/contact";
 
 import { Button, TextField, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";

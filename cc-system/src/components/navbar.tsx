@@ -1,13 +1,13 @@
 import { useContext } from 'react';
-import { AppBar, Button, Box, Toolbar, Typography, IconButton, Grid } from '@mui/material';
+import { AppBar, Button, Box, Toolbar, IconButton, Grid } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import { Link, useNavigate } from 'react-router-dom'
 
-import Logo from '../../assets/images/logo.png'
+import Logo from '../assets/images/logo.png'
 import styled from '@emotion/styled';
 
-import { AuthContext } from '../../Auth/authContext';
+import { AuthContext } from '../Auth/authContext';
 
 const LogoImg = styled("img")({
     maxWidth: '120px',
