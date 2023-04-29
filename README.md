@@ -2,10 +2,13 @@
 
 ## Iniciando o projeto
 
-- Clone o projeto;
-- No terminal digite "cd cc-system";
+- Aperte "Windows" + "R", digite "CMD" e aperte "Enter"
+- Dentro do terminal de um git clone "https://github.com/GustavoFonsecalog/front-junior-creativecode-2023.git"
+- No terminal digite "front-junior-creativecode-2023";
+- No terminal digite "cc-system";
 - Dentro de cc-system, no terminal digite "yarn" para instalar as dependências necessárias;
 - Após a instalação finalizar, no terminal digite "yarn start", espere ele compilar e entre na porta que for mostrada no terminal.
+- Pronto, só utilizar o projeto!
 
 ![Badge status](https://img.shields.io/badge/STATUS-FINALIZADO-green)
 ![Badge gerenciador de dependências](https://img.shields.io/badge/Yarn-1.22.19-blue)
