@@ -3,7 +3,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom'
 
 import Home from '../pages/Home/home'
-import Private from '../pages/Private/private'
+import Private from '../pages/ContactList/contactList'
 import { RequireAuth } from '../Auth/RequireAuth';
 import { Login } from '../pages/Login/login';
 
