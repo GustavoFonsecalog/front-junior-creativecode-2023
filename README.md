@@ -1,21 +1,27 @@
 <h1 align="center"> front-junior-creativecode-2023 </h1>
 
 ![Badge status](https://img.shields.io/badge/STATUS-FINALIZADO-green)
-![Badge gerenciador de dependências](https://img.shields.io/badge/NPM-8.1.2-blue)
-![Badge ultima atualização](https://img.shields.io/badge/Ultima%20atualiza%C3%A7%C3%A3o-Janeiro-yellow)
+![Badge gerenciador de dependências](https://img.shields.io/badge/Yarn-1.22.19-blue)
+![Badge ultima atualização](https://img.shields.io/badge/Ultima%20atualiza%C3%A7%C3%A3o-Abril-yellow)
 
-Projeto criado com React e Axios onde foi feito um site para listar filmes com melhores classificações, sendo possível ver informações sobre os mesmos como notas, orçamento, faturamento, entre outras.
+Projeto criado com React, Typescript e Mui-Material onde foi feito um site com funcionalidade de login/logout e uma página para listar contatos, onde é possível adicionar novos contatos, removê-los e editar aqueles ja adicionados.
 
 ## :hammer: Funcionalidades do projeto
 
-Barra de Pesquisa: Utilizada para pesquisar um filme em específico ou algo relacionado ao nome digitado no input (pode-se usar tanto o Enter quanto o botão do lado do campo para iniciar a pesquisa).
-![Video exemplo barra de pesquisa](https://user-images.githubusercontent.com/83730260/212412918-8a80189a-93af-4d78-8de3-faee881ffdd7.gif)
+Login: o botão de login serve para você acessar o site como um usuário e assim ter acesso a página de contatos. Os usuários que podem ser utilizados para acessar são:
+ 
+ email: 'gustavofonsecajb@hotmail.com',
+ password: 'gustavo123'
+  
+ email: 'creativeCode@hotmail.com',
+ password: 'creativecode123'
+  
+ email: 'feTakada@hotmail.com',
+ password: 'feTakada123'
 
-Botão de detalhes: Botão utilizado para ver detalhes do filme selecionado.
-![Video exemplo botão de detalhes](https://user-images.githubusercontent.com/83730260/212414271-7d272997-52a1-4177-b93e-5f495cde040b.gif)
+## Página Contatos
 
-Botão de Home: Botão utilizado para retornar a página home onde é listado os filmes com melhores classificações.
-![Video exemplo botão de detalhes](https://user-images.githubusercontent.com/83730260/212416347-5682d02e-a3ad-4b17-87b3-aef9ab97c8a2.gif)
+Na página de contatos você tem um formulário que pode adicionar contatos, preenchendo nome, email, data de nascimento, cpf e 1 ou mais números (Preencha o número e clique em "Add Number"), após preencher tudo você finaliza o processo clicando em "Add Contact"
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
@@ -23,11 +29,10 @@ Botão de Home: Botão utilizado para retornar a página home onde é listado os
 - ``React``
 - ``React-router-dom``
 - ``React-icons``
-- ``Vite``
-- ``Axios``
+- ``Mui-Material``
 
 ## 📁 Acesso ao projeto
-Você pode acessar os arquivos do projeto clicando [aqui](https://github.com/GustavoFonsecalog/Movies-List/tree/main/Movies/src).
+Você pode acessar os arquivos do projeto clicando [aqui](https://github.com/GustavoFonsecalog/front-junior-creativecode-2023/tree/main/cc-system).
 
 ## Autores
 
