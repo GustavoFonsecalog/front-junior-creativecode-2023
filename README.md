@@ -1,5 +1,12 @@
 <h1 align="center"> front-junior-creativecode-2023 </h1>
 
+## Iniciando o projeto
+
+- Clone o projeto;
+- No terminal digite "cd cc-system";
+- Dentro de cc-system, no terminal digite "yarn" para instalar as dependências necessárias;
+- Após a instalação finalizar, no terminal digite "yarn start", espere ele compilar e entre na porta que for mostrada no terminal.
+
 ![Badge status](https://img.shields.io/badge/STATUS-FINALIZADO-green)
 ![Badge gerenciador de dependências](https://img.shields.io/badge/Yarn-1.22.19-blue)
 ![Badge ultima atualização](https://img.shields.io/badge/Ultima%20atualiza%C3%A7%C3%A3o-Abril-yellow)
@@ -21,7 +28,7 @@ Login: o botão de login serve para você acessar o site como um usuário e assi
 
 ## Página Contatos
 
-Na página de contatos você tem um formulário que pode adicionar contatos, preenchendo nome, email, data de nascimento, cpf e 1 ou mais números (Preencha o número e clique em "Add Number"), após preencher tudo você finaliza o processo clicando em "Add Contact"
+Na página de contatos você tem um formulário que pode adicionar contatos, preenchendo nome, email, data de nascimento, cpf e 1 ou mais números (Preencha o número e clique em "Add Number"), após preencher tudo você finaliza o processo clicando em "Add Contact". Após o contato ser adicionado na lista, na tabela você vai ter "Actions" que contém a opção de Editar e Remover o contato da lista.
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
