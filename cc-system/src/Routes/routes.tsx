@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Routes, Route } from 'react-router-dom'
 
-import Home from '../pages/Home'
-import Private from '../pages/Private'
+import Home from '../pages/Home/home'
+import Private from '../pages/Private/private'
 import { RequireAuth } from '../Auth/RequireAuth';
-import { Login } from '../pages/Login';
+import { Login } from '../pages/Login/login';
 
 const AppRoutes = () => {
     return (

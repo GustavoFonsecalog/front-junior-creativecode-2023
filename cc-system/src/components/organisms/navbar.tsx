@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 import Logo from '../../assets/images/logo.png'
 import styled from '@emotion/styled';
+
 import { AuthContext } from '../../Auth/authContext';
 
 const LogoImg = styled("img")({
@@ -38,11 +39,14 @@ export default function ButtonAppBar() {
                             >
                                 <MenuIcon sx={{ color: '#f8de64' }} />
                             </IconButton>
-                            <Typography variant="h6" component="div" sx={{ flexGrow: 1, marginLeft: '100px' }}>
+                            <Typography variant="h6" component="div" sx={{ flexGrow: 1, marginLeft: '170px' }}>
                                 <Link to={'/'}>
                                     <LogoImg src={Logo} className='hidden-mobile' />
                                 </Link>
                             </Typography>
+                            <Link to={'/'}>
+                                <Button sx={{ color: '#f8de64', fontWeight: 'bold' }}> Home </Button>
+                            </Link>
                             <Link to={'/private'}>
                                 <Button sx={{ color: '#f8de64', fontWeight: 'bold' }}> Contatos </Button>
                             </Link>

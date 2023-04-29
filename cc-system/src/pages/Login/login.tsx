@@ -3,6 +3,7 @@ import { useState, useContext } from 'react'
 import { AuthContext } from '../../Auth/authContext'
 
 import { useNavigate } from 'react-router-dom'
+import { Users } from '../../users/users'
 
 export const Login = () => {
     const auth = useContext(AuthContext)
@@ -12,27 +13,54 @@ export const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    const verifyEmail = () => {
+        let isEmailExist = false;
+        for (let i = 0; i < Users.length; i++) {
+            if (Users[i].email === email) {
+                isEmailExist = true;
+                break;
+            }
+        }
+        return isEmailExist;
+    }
+
+    const verifyPassword = () => {
+        let isPasswordExist = false;
+        for (let i = 0; i < Users.length; i++) {
+            if (Users[i].password === password) {
+                isPasswordExist = true;
+                break;
+            }
+        }
+        return isPasswordExist;
+    }
+
     const handleLogin = async () => {
-        if (email && password) {
+        let isEmailExist = verifyEmail();
+        let isPasswordExist = verifyPassword();
+
+        if (email && password && isEmailExist && isPasswordExist) {
             const isLogged = await auth.signin(email, password)
             if (isLogged) {
                 navigate('/private')
             } else {
                 alert('Não deu certo')
             }
+        } else {
+            alert('Email ou senha inválidos');
         }
     }
 
+
     return (
         <Grid container sx={{
-            width: '100vw',
             height: '100vh',
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
         }}>
-            <Grid item md={6} lg={6} xs={12}>
+            <Grid item md={6} lg={3} xs={11}>
                 <Box sx={{
                     background: '#620cca',
                     padding: '100px',
@@ -45,7 +73,7 @@ export const Login = () => {
                         Faça seu login!
                     </Typography>
                     <Input
-                        type="text"
+                        type="email"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                         placeholder='email'
