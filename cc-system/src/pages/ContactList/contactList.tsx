@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ContactForm from "../../components/organisms/ContactForm";
 import { Contact } from "../../types/contact";
 import { Grid, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Container } from "@mui/material";
@@ -11,7 +11,27 @@ const Private: React.FC<Props> = () => {
 
     const handleAddContact = (contact: Contact) => {
         setContacts([...contacts, contact]);
+        console.log("contacts", contacts)
+        console.log("contact", contact)
     };
+
+    useEffect(() => {
+        if (contacts.length > 0) {
+            localStorage.setItem("contact", JSON.stringify(contacts))
+        }
+    }, [contacts])
+
+    useEffect(() => {
+        const storedContacts = localStorage.getItem("contact")
+        if (storedContacts != null) {
+            try {
+                const parsedContacts = JSON.parse(storedContacts)
+                setContacts(parsedContacts)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+    }, [])
 
     const handleEditContact = (contact: Contact) => {
         const index = contacts.findIndex((c) => c.id === contact.id);
@@ -23,6 +43,16 @@ const Private: React.FC<Props> = () => {
 
     const handleRemoveContact = (id: number) => {
         setContacts(contacts.filter((c) => c.id !== id));
+        const storedContacts = localStorage.getItem("contact");
+        if (storedContacts && typeof storedContacts === "string") {
+            // Obter a matriz de contatos armazenados no localStorage
+            const contacts = JSON.parse(storedContacts);
+            // Remover o contato específico da matriz de contatos
+            const updatedContacts = contacts.filter((c: any) => c.id !== id);
+            // Atualizar o localStorage com a matriz de contatos atualizada
+            localStorage.setItem("contact", JSON.stringify(updatedContacts));
+        }
+
     };
 
     const handleEditButtonClick = (contact: Contact) => {

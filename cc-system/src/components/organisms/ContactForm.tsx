@@ -75,7 +75,7 @@ const ContactForm: React.FC<Props> = ({ onAddContact, onEditContact, editingCont
             onEditContact(editedContact);
         } else {
             const newContact: Contact = {
-                id: Date.now(),
+                id: Math.random(),
                 name,
                 email,
                 cpf,
@@ -83,7 +83,6 @@ const ContactForm: React.FC<Props> = ({ onAddContact, onEditContact, editingCont
                 numbers,
             };
             onAddContact(newContact);
-            localStorage.setItem("contatos", JSON.stringify(newContact))
         }
 
         setName("");
@@ -116,7 +115,7 @@ const ContactForm: React.FC<Props> = ({ onAddContact, onEditContact, editingCont
             justifyContent: 'center',
             alignItems: 'center',
         }}>
-            <Grid container spacing={2} lg={6} >
+            <Grid container spacing={2} >
                 <Grid item xs={12}>
                     <TextField
                         label="Name"
