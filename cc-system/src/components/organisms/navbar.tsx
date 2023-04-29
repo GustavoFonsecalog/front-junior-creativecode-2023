@@ -39,11 +39,11 @@ export default function ButtonAppBar() {
                             >
                                 <MenuIcon sx={{ color: '#f8de64' }} />
                             </IconButton>
-                            <Typography variant="h6" component="div" sx={{ flexGrow: 1, marginLeft: '170px' }}>
+                            <Box component="div" className='hidden-mobile' sx={{ flexGrow: 1, marginLeft: '170px' }}>
                                 <Link to={'/'}>
-                                    <LogoImg src={Logo} className='hidden-mobile' />
+                                    <LogoImg src={Logo} />
                                 </Link>
-                            </Typography>
+                            </Box>
                             <Link to={'/'}>
                                 <Button sx={{ color: '#f8de64', fontWeight: 'bold' }}> Home </Button>
                             </Link>
