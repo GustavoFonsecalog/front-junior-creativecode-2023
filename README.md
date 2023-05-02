@@ -7,7 +7,7 @@
 - No terminal digite "cd front-junior-creativecode-2023";
 - No terminal digite "cd cc-system";
 - Dentro de cc-system, no terminal digite "yarn" para instalar as dependências necessárias;
-- Após a instalação finalizar, no terminal digite "yarn start", espere ele compilar e entre na porta que for mostrada no terminal.
+- Após a instalação finalizar, no terminal digite "yarn start", espere ele compilar e entre na porta que for mostrada no terminal (Ex: http://localhost:3000/).
 - Pronto, só utilizar o projeto!
 
 ![Badge status](https://img.shields.io/badge/STATUS-FINALIZADO-green)
